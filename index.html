@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roddingvej</title>
+  <style>
+    body { margin: 0; background: #111; color: #eee; font-family: system-ui, sans-serif; }
+    h1 { font-weight: 500; padding: 16px; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; padding: 0 16px 16px; }
+    .grid a { position: relative; display: block; aspect-ratio: 4/3; overflow: hidden; border-radius: 6px; background: #222; }
+    .grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .2s; }
+    .grid a:hover img, .grid a:focus-visible img { transform: scale(1.04); }
+    .play { position: absolute; inset: 0; display: grid; place-items: center; font-size: 48px; color: #fff; text-shadow: 0 2px 8px #000; pointer-events: none; }
+    dialog { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+    dialog::backdrop { background: rgba(0,0,0,.92); }
+    #stage { width: 100%; height: 100%; display: grid; place-items: center; }
+    #stage img, #stage video { max-width: 95vw; max-height: 90vh; }
+    dialog button { position: fixed; background: rgba(0,0,0,.5); color: #fff; border: 0; font-size: 32px; width: 56px; height: 56px; border-radius: 50%; cursor: pointer; }
+    #close { top: 16px; right: 16px; }
+    #prev { left: 16px; top: 50%; transform: translateY(-50%); }
+    #next { right: 16px; top: 50%; transform: translateY(-50%); }
+  </style>
+</head>
+<body>
+  <h1>Roddingvej</h1>
+  <main class="grid">
+    <a href="media/IMG_8702.mov" data-type="video"><img src="thumbs/IMG_8702.jpeg" alt="Video IMG_8702" loading="lazy"><span class="play">▶</span></a>
+    <a href="media/IMG_8703.mov" data-type="video"><img src="thumbs/IMG_8703.jpeg" alt="Video IMG_8703" loading="lazy"><span class="play">▶</span></a>
+    <a href="media/IMG_8709.mov" data-type="video"><img src="thumbs/IMG_8709.jpeg" alt="Video IMG_8709" loading="lazy"><span class="play">▶</span></a>
+    <a href="media/image00001.jpeg" data-type="image"><img src="thumbs/image00001.jpeg" alt="Billede image00001" loading="lazy"></a>
+    <a href="media/image00002.jpeg" data-type="image"><img src="thumbs/image00002.jpeg" alt="Billede image00002" loading="lazy"></a>
+    <a href="media/image00003.jpeg" data-type="image"><img src="thumbs/image00003.jpeg" alt="Billede image00003" loading="lazy"></a>
+    <a href="media/image00004.jpeg" data-type="image"><img src="thumbs/image00004.jpeg" alt="Billede image00004" loading="lazy"></a>
+    <a href="media/image00005.jpeg" data-type="image"><img src="thumbs/image00005.jpeg" alt="Billede image00005" loading="lazy"></a>
+    <a href="media/image00006.jpeg" data-type="image"><img src="thumbs/image00006.jpeg" alt="Billede image00006" loading="lazy"></a>
+    <a href="media/image00007.jpeg" data-type="image"><img src="thumbs/image00007.jpeg" alt="Billede image00007" loading="lazy"></a>
+    <a href="media/image00008.jpeg" data-type="image"><img src="thumbs/image00008.jpeg" alt="Billede image00008" loading="lazy"></a>
+    <a href="media/image00009.jpeg" data-type="image"><img src="thumbs/image00009.jpeg" alt="Billede image00009" loading="lazy"></a>
+    <a href="media/image00010.jpeg" data-type="image"><img src="thumbs/image00010.jpeg" alt="Billede image00010" loading="lazy"></a>
+    <a href="media/image00011.jpeg" data-type="image"><img src="thumbs/image00011.jpeg" alt="Billede image00011" loading="lazy"></a>
+    <a href="media/image00012.jpeg" data-type="image"><img src="thumbs/image00012.jpeg" alt="Billede image00012" loading="lazy"></a>
+    <a href="media/image00013.jpeg" data-type="image"><img src="thumbs/image00013.jpeg" alt="Billede image00013" loading="lazy"></a>
+    <a href="media/image00014.jpeg" data-type="image"><img src="thumbs/image00014.jpeg" alt="Billede image00014" loading="lazy"></a>
+    <a href="media/image00015.jpeg" data-type="image"><img src="thumbs/image00015.jpeg" alt="Billede image00015" loading="lazy"></a>
+    <a href="media/image00016.jpeg" data-type="image"><img src="thumbs/image00016.jpeg" alt="Billede image00016" loading="lazy"></a>
+    <a href="media/image00017.jpeg" data-type="image"><img src="thumbs/image00017.jpeg" alt="Billede image00017" loading="lazy"></a>
+    <a href="media/image00018.jpeg" data-type="image"><img src="thumbs/image00018.jpeg" alt="Billede image00018" loading="lazy"></a>
+    <a href="media/image00019.jpeg" data-type="image"><img src="thumbs/image00019.jpeg" alt="Billede image00019" loading="lazy"></a>
+    <a href="media/image00020.jpeg" data-type="image"><img src="thumbs/image00020.jpeg" alt="Billede image00020" loading="lazy"></a>
+    <a href="media/image00021.jpeg" data-type="image"><img src="thumbs/image00021.jpeg" alt="Billede image00021" loading="lazy"></a>
+    <a href="media/image00022.jpeg" data-type="image"><img src="thumbs/image00022.jpeg" alt="Billede image00022" loading="lazy"></a>
+    <a href="media/image00023.jpeg" data-type="image"><img src="thumbs/image00023.jpeg" alt="Billede image00023" loading="lazy"></a>
+    <a href="media/image00024.jpeg" data-type="image"><img src="thumbs/image00024.jpeg" alt="Billede image00024" loading="lazy"></a>
+    <a href="media/image00025.jpeg" data-type="image"><img src="thumbs/image00025.jpeg" alt="Billede image00025" loading="lazy"></a>
+    <a href="media/image00026.jpeg" data-type="image"><img src="thumbs/image00026.jpeg" alt="Billede image00026" loading="lazy"></a>
+    <a href="media/image00027.jpeg" data-type="image"><img src="thumbs/image00027.jpeg" alt="Billede image00027" loading="lazy"></a>
+    <a href="media/image00028.jpeg" data-type="image"><img src="thumbs/image00028.jpeg" alt="Billede image00028" loading="lazy"></a>
+    <a href="media/image00029.jpeg" data-type="image"><img src="thumbs/image00029.jpeg" alt="Billede image00029" loading="lazy"></a>
+    <a href="media/image00030.jpeg" data-type="image"><img src="thumbs/image00030.jpeg" alt="Billede image00030" loading="lazy"></a>
+    <a href="media/image00031.jpeg" data-type="image"><img src="thumbs/image00031.jpeg" alt="Billede image00031" loading="lazy"></a>
+    <a href="media/image00032.jpeg" data-type="image"><img src="thumbs/image00032.jpeg" alt="Billede image00032" loading="lazy"></a>
+    <a href="media/image00033.jpeg" data-type="image"><img src="thumbs/image00033.jpeg" alt="Billede image00033" loading="lazy"></a>
+    <a href="media/image00034.jpeg" data-type="image"><img src="thumbs/image00034.jpeg" alt="Billede image00034" loading="lazy"></a>
+    <a href="media/image00035.jpeg" data-type="image"><img src="thumbs/image00035.jpeg" alt="Billede image00035" loading="lazy"></a>
+    <a href="media/image00036.jpeg" data-type="image"><img src="thumbs/image00036.jpeg" alt="Billede image00036" loading="lazy"></a>
+    <a href="media/image00037.jpeg" data-type="image"><img src="thumbs/image00037.jpeg" alt="Billede image00037" loading="lazy"></a>
+    <a href="media/image00038.jpeg" data-type="image"><img src="thumbs/image00038.jpeg" alt="Billede image00038" loading="lazy"></a>
+    <a href="media/image00039.jpeg" data-type="image"><img src="thumbs/image00039.jpeg" alt="Billede image00039" loading="lazy"></a>
+    <a href="media/image00040.jpeg" data-type="image"><img src="thumbs/image00040.jpeg" alt="Billede image00040" loading="lazy"></a>
+    <a href="media/image00041.jpeg" data-type="image"><img src="thumbs/image00041.jpeg" alt="Billede image00041" loading="lazy"></a>
+    <a href="media/image00042.jpeg" data-type="image"><img src="thumbs/image00042.jpeg" alt="Billede image00042" loading="lazy"></a>
+    <a href="media/image00043.jpeg" data-type="image"><img src="thumbs/image00043.jpeg" alt="Billede image00043" loading="lazy"></a>
+    <a href="media/image00044.jpeg" data-type="image"><img src="thumbs/image00044.jpeg" alt="Billede image00044" loading="lazy"></a>
+    <a href="media/image00045.jpeg" data-type="image"><img src="thumbs/image00045.jpeg" alt="Billede image00045" loading="lazy"></a>
+    <a href="media/image00046.jpeg" data-type="image"><img src="thumbs/image00046.jpeg" alt="Billede image00046" loading="lazy"></a>
+    <a href="media/image00047.jpeg" data-type="image"><img src="thumbs/image00047.jpeg" alt="Billede image00047" loading="lazy"></a>
+    <a href="media/image00048.jpeg" data-type="image"><img src="thumbs/image00048.jpeg" alt="Billede image00048" loading="lazy"></a>
+    <a href="media/image00049.jpeg" data-type="image"><img src="thumbs/image00049.jpeg" alt="Billede image00049" loading="lazy"></a>
+    <a href="media/image00050.jpeg" data-type="image"><img src="thumbs/image00050.jpeg" alt="Billede image00050" loading="lazy"></a>
+    <a href="media/image00051.jpeg" data-type="image"><img src="thumbs/image00051.jpeg" alt="Billede image00051" loading="lazy"></a>
+    <a href="media/image00052.jpeg" data-type="image"><img src="thumbs/image00052.jpeg" alt="Billede image00052" loading="lazy"></a>
+    <a href="media/image00053.jpeg" data-type="image"><img src="thumbs/image00053.jpeg" alt="Billede image00053" loading="lazy"></a>
+    <a href="media/image00054.jpeg" data-type="image"><img src="thumbs/image00054.jpeg" alt="Billede image00054" loading="lazy"></a>
+    <a href="media/image00055.jpeg" data-type="image"><img src="thumbs/image00055.jpeg" alt="Billede image00055" loading="lazy"></a>
+    <a href="media/image00056.jpeg" data-type="image"><img src="thumbs/image00056.jpeg" alt="Billede image00056" loading="lazy"></a>
+    <a href="media/image00057.jpeg" data-type="image"><img src="thumbs/image00057.jpeg" alt="Billede image00057" loading="lazy"></a>
+    <a href="media/image00058.jpeg" data-type="image"><img src="thumbs/image00058.jpeg" alt="Billede image00058" loading="lazy"></a>
+    <a href="media/image00059.jpeg" data-type="image"><img src="thumbs/image00059.jpeg" alt="Billede image00059" loading="lazy"></a>
+    <a href="media/image00060.jpeg" data-type="image"><img src="thumbs/image00060.jpeg" alt="Billede image00060" loading="lazy"></a>
+    <a href="media/image00061.jpeg" data-type="image"><img src="thumbs/image00061.jpeg" alt="Billede image00061" loading="lazy"></a>
+    <a href="media/image00062.jpeg" data-type="image"><img src="thumbs/image00062.jpeg" alt="Billede image00062" loading="lazy"></a>
+    <a href="media/image00063.jpeg" data-type="image"><img src="thumbs/image00063.jpeg" alt="Billede image00063" loading="lazy"></a>
+    <a href="media/image00064.jpeg" data-type="image"><img src="thumbs/image00064.jpeg" alt="Billede image00064" loading="lazy"></a>
+    <a href="media/image00065.jpeg" data-type="image"><img src="thumbs/image00065.jpeg" alt="Billede image00065" loading="lazy"></a>
+    <a href="media/image00066.jpeg" data-type="image"><img src="thumbs/image00066.jpeg" alt="Billede image00066" loading="lazy"></a>
+    <a href="media/image00067.jpeg" data-type="image"><img src="thumbs/image00067.jpeg" alt="Billede image00067" loading="lazy"></a>
+    <a href="media/image00068.jpeg" data-type="image"><img src="thumbs/image00068.jpeg" alt="Billede image00068" loading="lazy"></a>
+    <a href="media/image00069.jpeg" data-type="image"><img src="thumbs/image00069.jpeg" alt="Billede image00069" loading="lazy"></a>
+    <a href="media/image00070.jpeg" data-type="image"><img src="thumbs/image00070.jpeg" alt="Billede image00070" loading="lazy"></a>
+    <a href="media/image00071.jpeg" data-type="image"><img src="thumbs/image00071.jpeg" alt="Billede image00071" loading="lazy"></a>
+    <a href="media/image00072.jpeg" data-type="image"><img src="thumbs/image00072.jpeg" alt="Billede image00072" loading="lazy"></a>
+    <a href="media/image00073.jpeg" data-type="image"><img src="thumbs/image00073.jpeg" alt="Billede image00073" loading="lazy"></a>
+    <a href="media/image00074.jpeg" data-type="image"><img src="thumbs/image00074.jpeg" alt="Billede image00074" loading="lazy"></a>
+  </main>
+
+  <dialog id="lightbox">
+    <div id="stage"></div>
+    <button id="prev" aria-label="Forrige">‹</button>
+    <button id="next" aria-label="Næste">›</button>
+    <button id="close" aria-label="Luk">×</button>
+  </dialog>
+
+  <script>
+    const links = [...document.querySelectorAll('.grid a')];
+    const box = document.getElementById('lightbox');
+    const stage = document.getElementById('stage');
+    let i = 0;
+
+    function show(n) {
+      i = (n + links.length) % links.length;
+      const a = links[i];
+      stage.innerHTML = a.dataset.type === 'video'
+        ? '<video controls autoplay playsinline><source type="video/mp4"></video>'
+        : '<img alt="">';
+      const el = stage.querySelector(a.dataset.type === 'video' ? 'source' : 'img');
+      el.src = a.getAttribute('href');
+      if (a.dataset.type === 'video') stage.querySelector('video').load();
+      if (!box.open) box.showModal();
+    }
+
+    links.forEach((a, n) => a.addEventListener('click', e => { e.preventDefault(); show(n); }));
+    document.getElementById('prev').onclick = () => show(i - 1);
+    document.getElementById('next').onclick = () => show(i + 1);
+    document.getElementById('close').onclick = () => box.close();
+    box.addEventListener('close', () => stage.innerHTML = '');
+    box.addEventListener('click', e => { if (e.target === stage) box.close(); });
+    document.addEventListener('keydown', e => {
+      if (!box.open) return;
+      if (e.key === 'ArrowLeft') show(i - 1);
+      if (e.key === 'ArrowRight') show(i + 1);
+    });
+  </script>
+</body>
+</html>
