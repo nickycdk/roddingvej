@@ -121,7 +121,7 @@
       i = (n + links.length) % links.length;
       const a = links[i];
       stage.innerHTML = a.dataset.type === 'video'
-        ? '<video controls autoplay playsinline><source type="video/mp4"></video>'
+        ? '<video controls autoplay muted playsinline><source type="video/mp4"></video>'
         : '<img alt="">';
       const el = stage.querySelector(a.dataset.type === 'video' ? 'source' : 'img');
       el.src = a.getAttribute('href');
